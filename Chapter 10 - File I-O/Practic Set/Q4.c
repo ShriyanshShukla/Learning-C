@@ -12,18 +12,17 @@ int main()
     emp e1, e2;
     {
     printf("Enter the name and salary of first employee:\n");
-    gets(e1.name);
+    fgets(e1.name, sizeof(e1.name), stdin);
+    e1.name[strlen(e1.name) - 1] = 0;
     scanf("%f", &e1.salary);
+    fflush(stdin);
 
     printf("Enter the name and salary of secound employee:\n");
-    gets(e1.name);
+    fgets(e2.name, sizeof(e2.name), stdin);
+    e2.name[strlen(e2.name) - 1] = 0;
     scanf("%f", &e2.salary);
+    fflush(stdin);
     };
-
-    // printf("%s", e1.name);
-    // printf("%.3f", e1.salary);
-    // printf("%s", e2.name);
-    // printf("%.3f", e2.salary);
 
     FILE* ptr;
     ptr = fopen("Q4.txt", "w");
