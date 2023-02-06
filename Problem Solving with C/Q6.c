@@ -4,8 +4,6 @@
 
 int main()
 {
-    int one = 1;
-    printf("%d\n", one);
     for (int i = 2; i <= 100; i++)
     {
         int num = 0;
