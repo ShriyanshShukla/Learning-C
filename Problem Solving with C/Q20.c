@@ -1,4 +1,4 @@
-// Addition of 2 matrix
+// Multiplication of 2 matrix
 
 #include <stdio.h>
 
@@ -47,15 +47,25 @@ int main()
     }
 
     int m3[a][b];
-    printf("Addition of 2 matrix:\n");
     for (int i = 0; i < a; i++)
     {
         for (int j = 0; j < b; j++)
         {
-            m3[i][j] = m1[i][j] + m2[i][j];
+            m3[i][j] = 0;
+            for (int k = 0; k < a; k++)
+            {
+                m3[i][j] += m1[i][k] * m2[k][j];
+            }   
+        }
+    }
+    printf("Multiplication of matrix:\n");
+    for (int i = 0; i < a; i++)
+    {
+        for (int j = 0; j < b; j++)
+        {
             printf("%d\t", m3[i][j]);
         }
-        printf("\n");
+            printf("\n");
     }
     return 0;
 }

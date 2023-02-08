@@ -8,7 +8,7 @@ int main()
     printf("How many rows and colums you want in the matrix\n");
     scanf("%d %d", &a, &b);
 
-    char m[a][b];
+    int m[a][b];
     printf("Enter the numbers\n");
     for (int i = 0; i < a; i++)
     {
