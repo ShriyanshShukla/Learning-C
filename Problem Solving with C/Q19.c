@@ -5,7 +5,7 @@
 int main()
 {
     int a, b;
-    printf("How many rows and colums you want in both matrixs\n");
+    printf("How many rows and colums you want in both matrix\n");
     scanf("%d %d", &a, &b);
 
     char m1[a][b];
